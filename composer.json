@@ -1,0 +1,46 @@
+{
+  "name": "zhyian/wp-activity-tracker",
+  "version": "1.0.0",
+  "type": "wordpress-muplugin",
+  "description": "Real-time User Activity Tracker for WordPress.",
+  "license": "GPL-2.0+",
+  "keywords": [
+    "activity",
+    "tracker",
+    "user",
+    "wordpress",
+    "wp-digital"
+  ],
+  "authors": [
+    {
+      "name": "Oleksandr Zhyian",
+      "email": "oleksandr.zhyian@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "ext-json": "*",
+    "composer/installers": "*",
+    "php-di/php-di": "*",
+    "jeffreyvanrossum/wp-settings": "*"
+  },
+  "require-dev": {
+    "wp-digital/php-cs": "*",
+    "squizlabs/php_codesniffer": "*"
+  },
+  "scripts": {
+    "phpcs": "vendor/bin/phpcs --standard=phpcs.xml",
+    "phpcbf": "vendor/bin/phpcbf --standard=phpcs.xml"
+  },
+  "autoload": {
+    "psr-4": {
+      "Zhyian\\ActivityTracker\\": "src/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}
