@@ -12,17 +12,23 @@ return [
 	ActivityTracker\ActionsRepository::class => DI\autowire()
 		->constructor(
 			[
-				DI\get( ActivityTracker\Actions\AttachmentAdd::class ),
-				DI\get( ActivityTracker\Actions\AttachmentDelete::class ),
-				DI\get( ActivityTracker\Actions\AttachmentEdit::class ),
-				DI\get( ActivityTracker\Actions\CommentDelete::class ),
-				DI\get( ActivityTracker\Actions\CommentEdit::class ),
-				DI\get( ActivityTracker\Actions\CommentInsert::class ),
+				DI\get( ActivityTracker\Actions\AttachmentAdded::class ),
+				DI\get( ActivityTracker\Actions\AttachmentDeleted::class ),
+				DI\get( ActivityTracker\Actions\AttachmentEdited::class ),
+				DI\get( ActivityTracker\Actions\CommentDeleted::class ),
+				DI\get( ActivityTracker\Actions\CommentEdited::class ),
+				DI\get( ActivityTracker\Actions\CommentInserted::class ),
 				DI\get( ActivityTracker\Actions\CommentSpam::class ),
 				DI\get( ActivityTracker\Actions\CommentUnSpam::class ),
-				DI\get( ActivityTracker\Actions\CommentTrash::class ),
+				DI\get( ActivityTracker\Actions\CommentTrashed::class ),
+				DI\get( ActivityTracker\Actions\PluginActivated::class ),
+				DI\get( ActivityTracker\Actions\PluginDeactivated::class ),
+				DI\get( ActivityTracker\Actions\PluginDeleted::class ),
 				DI\get( ActivityTracker\Actions\PostDeleted::class ),
 				DI\get( ActivityTracker\Actions\PostUpdated::class ),
+				DI\get( ActivityTracker\Actions\TermCreated::class ),
+				DI\get( ActivityTracker\Actions\TermDeleted::class ),
+				DI\get( ActivityTracker\Actions\TermEdited::class ),
 			]
 		),
 	ActivityTracker\Storages\Db::class       => DI\autowire()
