@@ -68,7 +68,7 @@ final class Db implements DatabaseInterface, StorageInterface {
             user_role varchar(40) NOT NULL default '',
             object_id bigint(20) NOT NULL default 0,
             type varchar(25) NOT NULL default '',
-            action varchar(40) NOT NULL default '',
+            action varchar(80) NOT NULL default '',
             PRIMARY KEY (event_id)
         ) $charset_collate;\n";
 

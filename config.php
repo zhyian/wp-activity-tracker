@@ -29,6 +29,12 @@ return [
 				DI\get( ActivityTracker\Actions\TermCreated::class ),
 				DI\get( ActivityTracker\Actions\TermDeleted::class ),
 				DI\get( ActivityTracker\Actions\TermEdited::class ),
+				DI\get( ActivityTracker\Actions\ThemeSwitched::class ),
+				DI\get( ActivityTracker\Actions\UserDeleted::class ),
+				DI\get( ActivityTracker\Actions\UserLoggedIn::class ),
+				DI\get( ActivityTracker\Actions\UserLoggedOut::class ),
+				DI\get( ActivityTracker\Actions\UserUpdated::class ),
+				DI\get( ActivityTracker\Actions\UserRegistered::class ),
 			]
 		),
 	ActivityTracker\Storages\Db::class       => DI\autowire()
